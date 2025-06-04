@@ -1,15 +1,15 @@
 import time
 from typing import Dict
 
-from .config import SYMBOLS
-from .market import MarketData
-from .strategy import SMACrossStrategy
-from .order import OrderManager
-from .state import BotState
-from .recovery import save_state, load_state
-from .commands.terminal import TerminalCommand
-from .commands.filewatcher import FileWatcher
-from .utils.logging import setup_logger
+from config import SYMBOLS
+from market import MarketData
+from strategy import SMACrossStrategy
+from order import OrderManager
+from state import BotState
+from recovery import save_state, load_state
+from commands.terminal import TerminalCommand
+from commands.filewatcher import FileWatcher
+from utils.logging import setup_logger
 
 logger = setup_logger()
 
