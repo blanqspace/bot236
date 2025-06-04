@@ -2,7 +2,7 @@ from threading import Thread
 from typing import Callable
 from telegram import Bot, Update
 from telegram.ext import Updater, CommandHandler, CallbackContext
-from ..config import TELEGRAM_TOKEN, TELEGRAM_CHAT_ID
+from tradingbot.config import TELEGRAM_TOKEN, TELEGRAM_CHAT_ID
 
 
 class TelegramCommand(Thread):

@@ -22,3 +22,7 @@ The project also contains unit test placeholders under `tests/`.
 pip install -r tradingbot/requirements.txt
 python -m tradingbot.main
 ```
+
+**Note:** always start the bot with the ``-m`` flag so that Python treats
+``tradingbot`` as a package. Running ``python tradingbot/main.py`` would not
+resolve imports correctly.

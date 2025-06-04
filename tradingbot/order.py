@@ -1,5 +1,5 @@
 from typing import Dict
-from .utils.logging import setup_logger
+from tradingbot.utils.logging import setup_logger
 
 logger = setup_logger()
 

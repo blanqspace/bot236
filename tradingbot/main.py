@@ -1,15 +1,24 @@
 import time
 from typing import Dict
 
-from .config import SYMBOLS
-from .market import MarketData
-from .strategy import SMACrossStrategy
-from .order import OrderManager
-from .state import BotState
-from .recovery import save_state, load_state
-from .commands.terminal import TerminalCommand
-from .commands.filewatcher import FileWatcher
-from .utils.logging import setup_logger
+"""Entry point for the trading bot."""
+
+# Allow running as a script by adding the parent directory to ``sys.path``.
+if __package__ is None or __package__ == "":  # pragma: no cover - runtime safety
+    import sys
+    from pathlib import Path
+
+    sys.path.append(str(Path(__file__).resolve().parent.parent))
+
+from tradingbot.config import SYMBOLS
+from tradingbot.market import MarketData
+from tradingbot.strategy import SMACrossStrategy
+from tradingbot.order import OrderManager
+from tradingbot.state import BotState
+from tradingbot.recovery import save_state, load_state
+from tradingbot.commands.terminal import TerminalCommand
+from tradingbot.commands.filewatcher import FileWatcher
+from tradingbot.utils.logging import setup_logger
 
 logger = setup_logger()
 

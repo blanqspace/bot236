@@ -1,7 +1,7 @@
 import json
 from typing import Dict
-from .config import RECOVERY_FILE
-from .state import BotState, SymbolState
+from tradingbot.config import RECOVERY_FILE
+from tradingbot.state import BotState, SymbolState
 
 
 def save_state(state: BotState):
